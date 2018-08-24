@@ -1,4 +1,16 @@
 /**
+* Register service serviceWorker
+*/
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('sw.js')
+      .then(reg => console.log(`Service worker registered. ${reg.scope}`))
+      .catch(err => console.log(`Service worker not registered. Error: ${err}`));
+  });
+}
+
+/**
  * Common database helper functions.
  */
 class DBHelper {
