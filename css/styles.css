@@ -195,7 +195,7 @@ h6 {
 }
 
 /* ====================== Restaurant Details ====================== */
-.inside #map-container {
+.inside .map-container {
   height: 40vh;
   background: blue none repeat scroll 0 0;
 }
