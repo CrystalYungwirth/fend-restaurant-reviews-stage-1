@@ -2,7 +2,7 @@ let restaurants;
 let neighborhoods;
 let cuisines;
 let map;
-//Why doesn't this work as let
+//Why doesn't this work as let?
 var markers = [];
 
 /**
@@ -150,6 +150,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
+  name.className = 'restaurant-name-header';
   li.append(name);
 
   const neighborhood = document.createElement('address');
