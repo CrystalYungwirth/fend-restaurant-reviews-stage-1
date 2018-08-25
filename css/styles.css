@@ -2,15 +2,19 @@
 /* CSS Document */
 
 :root {
-  --gun-powder: #424457; /*this background allows for more ARIA compliant font combinations */
-  --wisp-pink: #FCE4E8;
+  --primary-color: #3e2723;
+  --p-color-dark: #1b0000;
+  --p-color-light: #6a4f4b;
+  --secondary-color: #f5f5f5;
+  --s-color-dark: #c2c2c2;
+  --s-color-light: #fff;
 }
 
 body,
 td,
 th,
 p {
-  color: #333;
+  color: var(--p-color-dark);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -27,21 +31,20 @@ body {
   flex-direction: column;
   margin: 0;
 	padding: 0;
-  background-color: #fdfdfd;
-}
 
 ul, li {
-  color: #333;
+  color: var(--p-color-dark);
+}
   font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
-  color: var(--wisp-pink);
+  color: var(--s-color-light);
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #3397db;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -61,14 +64,14 @@ h6 {
 
 #maincontent {
   min-height: 100%;
-  background-color: #f3f3f3;
+  background-color: var(--p-color-light);
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: #444;
-  color: #dbdbdb; /* changed to meet WCAG AAA ratio */
+  background-color: var(--primary-color);
+  color: var(--s-color-light);
   letter-spacing: 1vw;
   text-align: center;
   text-transform: uppercase;
@@ -77,8 +80,8 @@ h6 {
 /* ====================== Navigation ====================== */
 .page-header {
   height: 5vh;
-  background-color: var(--gun-powder);
-	color: #fff;
+  background-color: var(--primary-color);
+	color: var(--secondary-color);
 	font-weight: 200;
   font-size: 1.250em;
 	letter-spacing: 1vw;
@@ -103,14 +106,14 @@ h6 {
 /* Add a slash symbol (/) before/behind each list item */
 
 #breadcrumb li+li:before {
-  color: var(--gun-powder);
+  color: var(--primary-color);
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-  color: var(--gun-powder);
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -131,25 +134,21 @@ h6 {
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  background-color: var(--gun-powder);
+  background-color: var(--primary-color);
 }
 
 .filter-options h2 {
-  color: var(--wisp-pink);
-  /* font-size: 1.125em; */
-  /* font-weight: normal; */
-  /* line-height: 1; */
+  color: var(--s-color-light);
+  width: 100%;
   font: normal 1.125em/1.5 Arial, sans-serif;
 }
 
 .filter-options select {
-  border: 1px solid #fff;
-  background-color: white;
-  font-family: Arial, sans-serif;
-  letter-spacing: 0;
+  background-color: var(--s-color-dark);
+  color: var(--p-color-dark);
+  font: 1.5em;
+  width: 40vw;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -158,14 +157,14 @@ h6 {
   display: grid;
   grid-gap: 2vw;
   padding: 0;
-  background-color: #f3f3f3;
+  background-color: var(--secondary-color);
   list-style: outside none none;
   text-align: center;
 }
 
 #restaurants-list li {
   border: 2px solid #ccc;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   font-family: Arial, sans-serif;
   text-align: left;
 }
@@ -175,7 +174,7 @@ h6 {
 }
 
 #restaurants-list li h1 {
-  color: var(--wisp-pink);
+  color: var(--primary-color);
   font-family: Arial, sans-serif;
   font-weight: 200;
   text-transform: uppercase;
@@ -186,9 +185,9 @@ h6 {
 }
 
 #restaurants-list li a {
-  border-bottom: 3px solid #eee;
-  background-color: orange;
-  color: #fff;
+  border-bottom: 3px solid var(--p-color-dark);
+  background-color: var(--p-color-light);
+  color: var(--s-color-light);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
