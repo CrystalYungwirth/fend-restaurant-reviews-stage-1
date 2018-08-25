@@ -148,21 +148,17 @@ createRestaurantHTML = (restaurant) => {
   image.alt = restaurant.alt;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
-  const neighborhood = document.createElement('p');
-  neighborhood.innerHTML = restaurant.neighborhood;
+  const neighborhood = document.createElement('address');
+  neighborhood.innerHTML = restaurant.neighborhood + '<br>';
   li.append(neighborhood);
-
-  const address = document.createElement('p');
-  address.innerHTML = restaurant.address;
-  li.append(address);
+  neighborhood.append(restaurant.address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
-  more.setAttribute('aria-labelledby', 'View Details');
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
