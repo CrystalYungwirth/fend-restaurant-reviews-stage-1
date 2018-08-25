@@ -1,4 +1,4 @@
-// Capturing current date to use to create caches version name. 
+// Capturing current date to use to create caches version name.
 // Using .toLocaleDateString to shorten version name.
 const date = new Date().toLocaleDateString();
 const cacheName = `v.${date}`;
@@ -6,7 +6,7 @@ const cacheName = `v.${date}`;
 /**
  *@description cache entire response
  */
-self.addEventListener('fetch', e => {
+self.addEventListener('fetch', (e) => {
   e.respondWith(
     fetch(e.request)
     .then(response => {
@@ -24,7 +24,7 @@ self.addEventListener('fetch', e => {
 /**
  *@description deletes prior cache
  */
-self.addEventListener('activate', e => {
+self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
