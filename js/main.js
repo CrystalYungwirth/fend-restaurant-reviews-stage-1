@@ -31,7 +31,7 @@ fetchNeighborhoods = () => {
  * Set neighborhoods HTML.
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
-  const select = document.getElementById('neighborhoods-select');
+  const select = document.getElementById('neighborhoodsSelect');
 
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
@@ -59,7 +59,7 @@ fetchCuisines = () => {
  * Set cuisines HTML.
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
-  const select = document.getElementById('cuisines-select');
+  const select = document.getElementById('cuisinesSelect');
 
   cuisines.forEach((cuisine) => {
     const option = document.createElement('option');
@@ -89,8 +89,8 @@ window.initMap = () => {
  * Update page and map for current restaurants.
  */
 updateRestaurants = () => {
-  const cSelect = document.getElementById('cuisines-select');
-  const nSelect = document.getElementById('neighborhoods-select');
+  const cSelect = document.getElementById('cuisinesSelect');
+  const nSelect = document.getElementById('neighborhoodsSelect');
 
   const cIndex = cSelect.selectedIndex;
   const nIndex = nSelect.selectedIndex;
@@ -141,6 +141,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  li.className = 'restaurants-list-item';
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
@@ -150,16 +151,18 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
-  name.className = 'restaurant-name-header';
+  name.className = 'restaurants-list-header';
   li.append(name);
 
   const neighborhood = document.createElement('address');
+  neighborhood.className = 'restaurants-list-address';
   neighborhood.innerHTML = restaurant.neighborhood + '<br>';
   li.append(neighborhood);
   neighborhood.append(restaurant.address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.className = 'restaurants-list-item-link';
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
