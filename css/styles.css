@@ -15,7 +15,6 @@
 }
 
 body, td, th, p {
-  ;
   color: var(--primary);
 }
 
@@ -188,7 +187,6 @@ a img {
   width: 100%;
   height: auto;
   margin: 0;
-  background-color: #ccc;
 }
 
 .restaurants-list-header {
@@ -223,34 +221,6 @@ a img {
 }
 
 /* ====================== Restaurant Details ====================== */
-
-.inside header {
-  z-index: 1000;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.inside #mapContainer {
-  position: fixed;
-  top: 80px;
-  right: 0;
-  width: 50%;
-  height: 87%;
-  background: blue none repeat scroll 0 0;
-}
-
-.inside #map {
-  width: 100%;
-  height: 100%;
-  background-color: #ccc;
-}
-
-.inside #footer {
-  position: absolute;
-  bottom: 0;
-  width: 50%;
-}
 
 #restaurant-name {
   margin: 15px 0 30px;
