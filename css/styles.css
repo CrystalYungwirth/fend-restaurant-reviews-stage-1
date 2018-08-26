@@ -216,6 +216,7 @@ a img {
   text-transform: uppercase;
   text-align: center;
   border: solid .2vw var(--p-dark);
+  width: 100%; 
 }
 
 .restaurant-container .restaurants-address {
@@ -226,29 +227,43 @@ a img {
   font: .85em var(--content);
 }
 
+.reviews-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.restaurant-body .restaurant-img {
+  min-width: 300px;
+  max-width: 300px;
+
+}
 .review {
   font-family: var(--content);
   max-width: 300px;
   border: solid .2vw var(--p-dark);
-  margin: 5% 0;
-  padding: 1em 0;
   border-radius: 3% 0;
-  /* used cssmatic.com/gradient-generator for card background */
-  background: rgba(193,158,103,1);
-  background: -moz-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(193,158,103,1)), color-stop(0%, rgba(78,52,46,1)), color-stop(19%, rgba(123,94,87,0.94)), color-stop(20%, rgba(146,123,117,0.94)), color-stop(24%, rgba(239,239,239,0.93)), color-stop(68%, rgba(239,239,239,0.78)));
-  background: -webkit-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
-  background: -o-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
-  background: -ms-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
-  background: linear-gradient(to bottom, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c19e67', endColorstr='#efefef', GradientType=0 );
+  height: 400px;
+  overflow-y: scroll;
+  margin: 2% auto;
+}
+
+.restaurant-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .name,
 .date,
 .rating {
   color: var(--s-light);
+  background-color: var(--p-light);
+  border: 2px solid var(--p-light);
+  padding: 2%;
 }
+
 .comments {
   margin-top: 4%;
 }
