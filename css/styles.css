@@ -324,3 +324,22 @@ a img {
 #restaurant-hours td {
   color: #666;
 }
+
+/* ====================== Media Queries ====================== */
+
+@media (min-width: 768px) {
+ .filter-options {
+	 flex-direction: row;
+	 justify-content: space-around;
+	 padding: 1% 0;
+ }
+
+ .neighbordhoods-select,
+ .cuisines-select {
+	 height: 4vh;
+	 width: 30vw;
+   border: 1px solid var(--p-dark);
+   font-family: var(--content);
+   letter-spacing: 0;
+ }
+}
