@@ -19,10 +19,10 @@ Descriptive `alt=""` attributes have been added to image, along with various `ar
 A basic service worker with caching was added to the project to provide offline availability.
 
 ## View Page
-###Online
+### Online
 [Restaurant Reviews App - Stage 1](https://crystalyungwirth.github.io/fend-restaurant-reviews-stage-1/l)
 
-###localhost
+### localhost
   1) [Download repository](https://github.com/CrystalYungwirth/fend-restaurant-reviews-stage-1.git) and unzip
   2)
   >If you have Python 2.x, spin up the server with python -m SimpleHTTPServer 8000
