@@ -143,16 +143,16 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   li.className = 'restaurants-list-item';
 
+  const name = document.createElement('h2');
+  name.innerHTML = restaurant.name;
+  name.className = 'restaurants-list-header';
+  li.append(name);
+
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.alt;
   li.append(image);
-
-  const name = document.createElement('h2');
-  name.innerHTML = restaurant.name;
-  name.className = 'restaurants-list-header';
-  li.append(name);
 
   const neighborhood = document.createElement('address');
   neighborhood.className = 'restaurants-list-address';
