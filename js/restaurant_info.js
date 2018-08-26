@@ -99,6 +99,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviewsContainer');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.className = 'reviews-header';
   container.appendChild(title);
 
   if (!reviews) {
@@ -119,23 +120,25 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.className = 'review';
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  name.classList.add('name');
+  name.className = 'name';
   li.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  date.classList.add('date');
+  date.className = 'date';
   li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
-  rating.classList.add('rating');
+  rating.className = 'rating';
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.className = 'comments';
   li.appendChild(comments);
 
   return li;

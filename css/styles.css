@@ -53,6 +53,7 @@ a img {
 
 .main-content {
   min-height: 100%;
+  width: 100%;
   background-color: var(--s-light);
 }
 
@@ -72,6 +73,7 @@ a img {
 }
 
 /* ====================== Navigation ====================== */
+
 .page-nav {
   display: flex;
   align-items: center;
@@ -92,6 +94,7 @@ a img {
   width: 100%;
   background-color: var(--s-light);
   list-style: none;
+  font: .5em var(--content);
 }
 
 .breadcrumb li {
@@ -136,18 +139,18 @@ a img {
   text-transform: uppercase;
 }
 
-.neighbordhoods-select,
-.cuisines-select {
+.neighbordhoods-select, .cuisines-select {
   width: 80vw;
   height: 8vh;
   border: 1px solid var(--p-dark);
   background-color: var(--secondary);
   font-family: var(--content);
-	font-size: 1em;
+  font-size: 1em;
   letter-spacing: 0;
 }
 
 /* ====================== Restaurant Listing ====================== */
+
 .restaurants-list {
   display: flex;
   flex-wrap: wrap;
@@ -164,7 +167,7 @@ a img {
   background-color: var(--secondary);
   font-family: var(--content);
   text-align: left;
-	border: solid var(--p-dark);
+  border: solid var(--p-dark);
 }
 
 .restaurant-img {
@@ -187,12 +190,12 @@ a img {
 
 .restaurants-address {
   font: .85em var(--content);
-	padding: 5% 0;
+  padding: 5% 0;
 }
 
 .restaurants-list-item-link {
   display: inline-flex;
-	justify-content: center;
+  justify-content: center;
   width: 100%;
   height: 3vh;
   border: solid var(--p-dark);
@@ -206,21 +209,63 @@ a img {
 
 /* ====================== Restaurant Details ====================== */
 
+.restaurant-name, .restaurant-cuisine, .reviews-header {
+  background-color: var(--primary);
+  color: var(--s-light);
+  font-family: var(--headers);
+  text-transform: uppercase;
+  text-align: center;
+  border: solid .2vw var(--p-dark);
+}
+
+.restaurant-container .restaurants-address {
+  padding: 1%;
+}
+
+.restaurant-hours {
+  font: .85em var(--content);
+}
+
+.review {
+  font-family: var(--content);
+  max-width: 300px;
+  border: solid .2vw var(--p-dark);
+  margin: 5% 0;
+  padding: 1em 0;
+  border-radius: 3% 0;
+  /* used cssmatic.com/gradient-generator for card background */
+  background: rgba(193,158,103,1);
+  background: -moz-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(193,158,103,1)), color-stop(0%, rgba(78,52,46,1)), color-stop(19%, rgba(123,94,87,0.94)), color-stop(20%, rgba(146,123,117,0.94)), color-stop(24%, rgba(239,239,239,0.93)), color-stop(68%, rgba(239,239,239,0.78)));
+  background: -webkit-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
+  background: -o-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
+  background: -ms-linear-gradient(top, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
+  background: linear-gradient(to bottom, rgba(193,158,103,1) 0%, rgba(78,52,46,1) 0%, rgba(123,94,87,0.94) 19%, rgba(146,123,117,0.94) 20%, rgba(239,239,239,0.93) 24%, rgba(239,239,239,0.78) 68%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c19e67', endColorstr='#efefef', GradientType=0 );
+}
+
+.name,
+.date,
+.rating {
+  color: var(--s-light);
+}
+.comments {
+  margin-top: 4%;
+}
+
 /* ====================== Media Queries ====================== */
 
 @media (min-width: 768px) {
- .filter-options {
-	 flex-direction: row;
-	 justify-content: space-around;
-	 padding: 1% 0;
- }
-
- .neighbordhoods-select,
- .cuisines-select {
-	 height: 4vh;
-	 width: 30vw;
-   border: 1px solid var(--p-dark);
-   font-family: var(--content);
-   letter-spacing: 0;
- }
+  .filter-options {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1% 0;
+  }
+  .neighbordhoods-select, .cuisines-select {
+    height: 4vh;
+    width: 30vw;
+    border: 1px solid var(--p-dark);
+    font-family: var(--content);
+    letter-spacing: 0;
+  }
 }
