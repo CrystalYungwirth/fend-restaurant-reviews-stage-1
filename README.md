@@ -47,7 +47,7 @@ A basic service worker with caching was added to the project to provide offline 
 
 
 ## Contributions
-I am not accepting contributions. This may change in the future if I implement my ideas for more game features.
+I would be interested in reviewing any recommendations, especially related to the areas mentioned in the [Overview](#overview). However, I won't be able to merge requests until after October when I finish the nanodegree program.
 
 ## License
 [MIT License](LICENSE)
