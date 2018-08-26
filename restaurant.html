@@ -5,34 +5,34 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Cabin" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Cabin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restaurant Info</title>
 </head>
 
-<body>
-  <header class="restaurant-page">
+<body class="restaurant-body">
+  <header class="restaurants-list-header">
     <nav class="page-nav" aria-labelledby="page">
-      <h1 class="page-header"><a class="page-nav-link" href="/index.html">Restaurant Reviews</a></h1>
+      <h1 class="page-header"><a class="link" href="/index.html">Restaurant Reviews</a></h1>
     </nav>
-    <ul class="breadcrumb" id="breadcrumb" role="navigation ">
-      <li><a href="/index.html">Home</a></li>
+    <ul class="breadcrumb" id="breadcrumb" role="navigation">
+      <li><a class="link" href="/index.html">Home</a></li>
     </ul>
   </header>
 
-  <main class="main-content" id="mainContent">
-    <div class="map-container" id="mapContainer">
+  <main class="main-content">
+    <div class="map-container">
       <div class="map" id="map"></div>
     </div>
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+    <section class="restaurant-container">
+      <h2 class="restaurant-name" id="restaurantName"></h2>
+      <img class="restaurant-img" id="restaurantImg">
+      <p class="restaurant-cuisine" id="restaurantCuisine"></p>
+      <address class="restaurants-address" id="restaurantAddress"></address>
+      <table class="restaurant-hours" id="restaurantHours"></table>
     </section>
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+    <section class="reviews-container" id="reviewsContainer">
+      <ul class="reviews-list" id="reviewsList"></ul>
     </section>
   </main>
 
@@ -41,7 +41,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAmGQhzr0rSSKQ3KS6B-p_51uNEQx8LGI&libraries=places&callback=initMap"></script>
 
   <footer class="footer" id="footer">
-    Copyright (c) 2017 <a class="footer-link" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a class="link" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 </body>
 

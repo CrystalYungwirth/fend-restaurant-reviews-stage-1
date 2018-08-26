@@ -20,6 +20,7 @@ body, td, th, p {
 
 body {
   font-size: 20px;
+  max-width: 100vw;
 }
 
 .skip-link {
@@ -66,16 +67,16 @@ a img {
   text-transform: uppercase;
 }
 
-.footer-link {
-	color: inherit;
+.link {
+  color: inherit;
 }
-/* ====================== Navigation ====================== */
 
+/* ====================== Navigation ====================== */
 .page-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   height: 5vh;
   background-color: var(--primary);
 }
@@ -87,21 +88,11 @@ a img {
   text-transform: uppercase;
 }
 
-.page-nav-link {
-  color: var(--s-light);
-}
-
 .breadcrumb {
-  width: calc(50% - 80px);
-  margin: 0;
-  padding: 10px 40px 16px;
+  width: 100%;
   background-color: var(--s-light);
   list-style: none;
 }
-
-/* Display list items side by side */
-
-/* TODO: update breadcrumb li's to have class names */
 
 .breadcrumb li {
   display: inline;
@@ -113,13 +104,6 @@ a img {
   padding: 8px;
   color: var(--p-dark);
   content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-
-.breadcrumb li a {
-  color: var(--secondary);
-  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
@@ -152,7 +136,8 @@ a img {
   text-transform: uppercase;
 }
 
-.neighbordhoods-select, .cuisines-select {
+.neighbordhoods-select,
+.cuisines-select {
   width: 80vw;
   height: 8vh;
   border: 1px solid var(--p-dark);
@@ -163,7 +148,6 @@ a img {
 }
 
 /* ====================== Restaurant Listing ====================== */
-
 .restaurants-list {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +185,7 @@ a img {
   margin: 0;
 }
 
-.restaurants-list-address {
+.restaurants-address {
   font: .85em var(--content);
 	padding: 5% 0;
 }
@@ -221,79 +205,6 @@ a img {
 }
 
 /* ====================== Restaurant Details ====================== */
-
-#restaurant-name {
-  margin: 15px 0 30px;
-  color: #f18200;
-  font-family: Arial, sans-serif;
-  font-weight: 200;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-
-#restaurant-img {
-  width: 90%;
-}
-
-#restaurant-address {
-  margin: 10px 0px;
-}
-
-#restaurant-cuisine {
-  width: 90%;
-  margin: 0 0 20px;
-  padding: 2px 0;
-  background-color: #333;
-  color: #ddd;
-  font-weight: 300;
-  letter-spacing: 10px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#restaurant-container, #reviews-container {
-  width: 50%;
-  padding: 140px 40px 30px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #d9d9d9;
-}
-
-#reviews-container {
-  padding: 30px 40px 80px;
-}
-
-#reviews-container h2 {
-  padding-bottom: 1pt;
-  color: #f58500;
-  font-weight: 300;
-  letter-spacing: -1px;
-}
-
-#reviews-list {
-  margin: 0;
-  padding: 0;
-}
-
-#reviews-list li {
-  display: block;
-  position: relative;
-  width: 85%;
-  margin: 0 0 30px;
-  padding: 0 20px 20px;
-  overflow: hidden;
-  border: 2px solid #f3f3f3;
-  background-color: #fff;
-  list-style-type: none;
-}
-
-#reviews-list li p {
-  margin: 0 0 10px;
-}
-
-#restaurant-hours td {
-  color: #666;
-}
 
 /* ====================== Media Queries ====================== */
 

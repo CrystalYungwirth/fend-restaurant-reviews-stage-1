@@ -155,7 +155,7 @@ createRestaurantHTML = (restaurant) => {
   li.append(image);
 
   const neighborhood = document.createElement('address');
-  neighborhood.className = 'restaurants-list-address';
+  neighborhood.className = 'restaurants-address';
   neighborhood.innerHTML = restaurant.neighborhood + '<br>';
   li.append(neighborhood);
   neighborhood.append(restaurant.address);
