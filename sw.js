@@ -6,7 +6,7 @@ const cacheName = `v.${date}`;
 /**
  *@description cache entire response
  */
-self.addEventListener('fetch', (e) => {
+self.addEventListener('install', (e) => {
   e.respondWith(
     fetch(e.request)
     .then(response => {
