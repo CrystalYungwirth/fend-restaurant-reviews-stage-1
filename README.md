@@ -20,7 +20,7 @@ A basic service worker with caching was added to the project to provide offline 
 
 ## View Page
 ### Online
-[Restaurant Reviews App - Stage 1](https://crystalyungwirth.github.io/fend-restaurant-reviews-stage-1/l)
+[Restaurant Reviews App - Stage 1](https://crystalyungwirth.github.io/fend-restaurant-reviews-stage-1/)
 
 ### localhost
   1) [Download repository](https://github.com/CrystalYungwirth/fend-restaurant-reviews-stage-1.git) and unzip
