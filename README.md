@@ -20,10 +20,10 @@ A basic service worker with caching was added to the project to provide offline 
 
 ## View Page
 ### Online
-[Restaurant Reviews App - Stage 1](https://crystalyungwirth.github.io/fend-restaurant-reviews-stage-1/)
+[Restaurant Reviews App - Stage 1](https://crystalyungwirth.github.io/udacity-fend-p5-restaurant-reviews-stage-1/)
 
 ### localhost
-  1) [Download repository](https://github.com/CrystalYungwirth/fend-restaurant-reviews-stage-1.git) and unzip
+  1) [Download repository](https://github.com/CrystalYungwirth/udacity-fend-p5-restaurant-reviews-stage-1.git) and unzip
   2)
   >If you have Python 2.x, spin up the server with python -m SimpleHTTPServer 8000
    For Python 3.x, you can use python3 -m http.server 8000.
